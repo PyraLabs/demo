@@ -4,12 +4,13 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 
 const routes = [
+    { path: '/', redirect: '/home' },
     { path: '/home', component: Home },
     { path: '/about', component: About },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/demo/'),  // 加上 GitHub Pages 的项目路径
     routes,
 })
 
